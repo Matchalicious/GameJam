@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour
 {
     public float moveSpeed;
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
     Vector2 allMove;
     Vector2 mousePos;
     public Camera cam;
