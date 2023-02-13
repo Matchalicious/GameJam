@@ -8,6 +8,7 @@ public class Player_Controller : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 allMove;
     Vector2 mousePos;
+    public Camera cam;
 
     // Start is called before the first frame update
     void Start()
