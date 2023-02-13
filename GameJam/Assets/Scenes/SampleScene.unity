@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a0a0c6f37d04ff79919df3b2ae41dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
+  fireRate: 0.5
   projectileDamage: 6
   projectileKnockback: 10
   projectileSpeed: 0.5
@@ -2267,6 +2267,6 @@ MonoBehaviour:
   projectileDamage: 1
   projectileKnockback: 1
   projectileSpeed: 0.2
-  kick: 3
+  kick: 1
   projectile: {fileID: 3343878276748884637, guid: f1648fdd3dc424e88b6fecbe769abb10, type: 3}
   playerRb: {fileID: 206903296}
