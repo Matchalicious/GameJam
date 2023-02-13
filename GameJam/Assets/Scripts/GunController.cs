@@ -7,15 +7,15 @@ public class GunController : MonoBehaviour
     //Variables
     private float nextTimeToFire = 0f;
     public float fireRate = 5f;
-    public float projectileDecay = 10f;
     public float projectileDamage = 5f;
     public float projectileKnockback = 2f;
     public float projectileSpeed = 0.3f;
-
+    public float kick = 1f;
 
     //References
     Transform spawnerTransform;
     public GameObject projectile;
+    public Rigidbody2D playerRb;
     
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,8 @@ public class GunController : MonoBehaviour
     }
 
     void Shoot(){
+        playerRb.AddRelativeForce(Vector2.left * kick, ForceMode2D.Impulse);
+        
         var projectileGO = Instantiate(projectile, spawnerTransform.position, spawnerTransform.rotation).GetComponent<Projectile>();
         projectileGO.speed = projectileSpeed;
         projectileGO.knockback = projectileKnockback;
