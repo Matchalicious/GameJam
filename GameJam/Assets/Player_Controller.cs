@@ -20,8 +20,8 @@ public class Player_Controller : MonoBehaviour
     void Update()
     {
         //Gather inputs
-        allMove.x = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        allMove.y = Input.GetAxisRaw("Vertical") * moveSpeed;
+        allMove.x = Input.GetAxisRaw("Horizontal");
+        allMove.y = Input.GetAxisRaw("Vertical");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
@@ -29,7 +29,7 @@ public class Player_Controller : MonoBehaviour
     void FixedUpdate()
     {
         //Creates the actual movement by adding force to the player
-        rb.AddForce(allMove, ForceMode2D.Force);
+        rb.AddForce(allMove.normalized * moveSpeed, ForceMode2D.Force);
 
         //Points player towards mouse
         Vector2 lookDir = mousePos-rb.position;
