@@ -416,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566352059}
   m_LocalRotation: {x: 0, y: 0, z: 0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: 0.6, y: 0.46, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -524,8 +524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  projectileDamage: 5
-  projectileKnockback: 10
+  projectileDamage: 3
+  projectileKnockback: 5
   projectileSpeed: 0.1
   kick: 10
   spawnPointZero: {fileID: 566352060}
@@ -695,7 +695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118946625}
   m_LocalRotation: {x: 0, y: 0, z: -0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: 0.6, y: -0.48, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  projectileDamage: 5
+  projectileDamage: 6
   projectileKnockback: 10
   projectileSpeed: 0.5
   kick: 8
