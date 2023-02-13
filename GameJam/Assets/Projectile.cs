@@ -5,10 +5,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     //Variables
-    public float speed = 10f; 
-    public float knockback = 1f; 
-    public float damage = 5f; 
-
+    public float speed; 
+    public float knockback; 
+    public float damage; 
+    
     void FixedUpdate(){
         Vector3 prevPos = transform.position; //stores starting pos
         transform.Translate(Vector2.right * speed); //moves projectile
