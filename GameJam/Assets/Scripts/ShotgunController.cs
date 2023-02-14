@@ -18,7 +18,8 @@ public class ShotgunController : MonoBehaviour
     public Transform spawnPointOne;
     public Transform spawnPointTwo;
     public GameObject projectile;
-    public Rigidbody2D playerRb;    
+    public Rigidbody2D playerRb; 
+    public AudioSource shootSound;   
 
     // Update is called once per frame
     void Update()
@@ -31,6 +32,7 @@ public class ShotgunController : MonoBehaviour
     }
 
     void Shoot(){
+        shootSound.Play();
         playerRb.AddRelativeForce(Vector2.left * kick, ForceMode2D.Impulse);
         
         var projectileGO = Instantiate(projectile, spawnPointZero.position, spawnPointZero.rotation).GetComponent<Projectile>();

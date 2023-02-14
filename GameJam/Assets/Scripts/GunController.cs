@@ -16,6 +16,7 @@ public class GunController : MonoBehaviour
     Transform spawnerTransform;
     public GameObject projectile;
     public Rigidbody2D playerRb;
+    public AudioSource shootSound;
     
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class GunController : MonoBehaviour
     }
 
     void Shoot(){
+        shootSound.Play();
         playerRb.AddRelativeForce(Vector2.left * kick, ForceMode2D.Impulse);
         
         var projectileGO = Instantiate(projectile, spawnerTransform.position, spawnerTransform.rotation).GetComponent<Projectile>();
