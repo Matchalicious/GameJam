@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //References
+    public AudioSource hurtSound;
+    
     //Variables
     public float maxHealth = 5;
     public float currentHealth;
@@ -15,9 +18,10 @@ public class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(float damage){
+        hurtSound.Play();
         currentHealth -= damage;
         if(currentHealth <= 0){
-            Die();
+            Invoke("Die", .1f);
         }
     }
 

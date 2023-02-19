@@ -9,11 +9,13 @@ public class Player_Controller : MonoBehaviour
     Vector2 allMove;
     Vector2 mousePos;
     public Camera cam;
+    GameObject sceneManager;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sceneManager = GameObject.FindWithTag("Manager");
     }
     
     // Update is called once per frame
@@ -23,6 +25,10 @@ public class Player_Controller : MonoBehaviour
         allMove.x = Input.GetAxisRaw("Horizontal");
         allMove.y = Input.GetAxisRaw("Vertical");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if(Input.GetButtonDown("Submit")){
+            sceneManager.GetComponent<Manager>().ReloadRequest();
+        }
 
     }
     //I used fixed update to make character speed framerate independent
