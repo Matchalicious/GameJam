@@ -30,6 +30,14 @@ public class Player_Controller : MonoBehaviour
             sceneManager.GetComponent<Manager>().ReloadRequest();
         }
 
+        //Slow-mo
+        //if(Input.GetButtonDown("Jump")){
+            //Time.timeScale = .5f;
+        //}
+        //if (Input.GetButtonUp("Jump")){
+            //Time.timeScale = 1f;
+        //}
+
     }
     //I used fixed update to make character speed framerate independent
     void FixedUpdate()
